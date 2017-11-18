@@ -3,17 +3,15 @@
     <title>JavaScript Methods</title>
     <script>
       var sale = 0.5; // 50% off
-      var tshirt = 20 * sale;
-      var android = 35 * sale;
-      var robot = 25.99 * sale;
+      var tshirt = 20;
+      var android = 35;
+      var robot = 25.99;
 
       // Using toFixed(), update the outputs to ensure it always shows 2 decimals
       // BONUS: Add a dollar sign
-      document.write(tshirt.toFixed(2));
-      document.write("<br>");
-      document.write(android.toFixed(2));
-      document.write("<br>");
-      document.write(robot.toFixed(2));
+      document.write("Tshirt price:  <br>$<del>"+tshirt+"</del> $"+(sale*tshirt).toFixed(2)+"<br>");
+      document.write("Android price: <br>$<del>"+android+"</del> $"+(sale*android).toFixed(2)+"<br>");
+      document.write("Robot price: <br>$<del>"+android+"</del> $"+(sale*robot).toFixed(2)+"<br>");
     </script>
   </head>
   <body>
