@@ -7,25 +7,19 @@
       var discount = 0.15; // 15%
 
       //Show what's in the Cart
-      document.write("1 tshirt: $"+tshirtPrice);
-      document.write("<br>");
-      document.write("1 android: $"+androidPrice);
-      document.write("<br>");
-      document.write("Discount percent: "+discount*100+"%"); //convert
-      document.write("<br>");
-      document.write("<br>");
+      document.write("1 tshirt: $"+tshirtPrice+"<br>");
+      document.write("1 android: $"+androidPrice+"<br>");
+      document.write("Discount percent: "+discount*100+"%<br><br>"); //convert
 
       // What is the cost of one t-shirt and one android?
       var subtotal = tshirtPrice+androidPrice;
-      document.write("Subtotal: $"+subtotal);
-      document.write("<br>");
+      document.write("Subtotal: $"+subtotal+"<br>");
 
 
       // Ladies Learning Code members gets 15% off!
       // Figure out how much the discount will be.
       var discountAmount = subtotal*discount;
-      document.write("Discount: $"+discountAmount);
-      document.write("<br>");
+      document.write("Discount: $"+discountAmount+"<br>");
 
 
       // Apply the discount to get the final price.
