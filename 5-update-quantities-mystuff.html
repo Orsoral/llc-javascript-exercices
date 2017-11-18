@@ -4,20 +4,41 @@
     <link rel="stylesheet" href="exercises.css">
   </head>
   <body>
-    
+
     <div class="quantities">
       <img src="assets/plush-android.jpg" width="195" height="195">
       <br>
-      
-      <button>Add</button>
-      <button>Remove</button>
+
+      <button id="addBtn">Add</button>
+      <button id="removeBtn">Remove</button>
       <br>
-      
-      Quantity <input type="text" value="0">
+
+      Quantity <input id="quantityDisplay" type="text" value="0">
     </div>
-    
+
     <script>
       // ADD JAVASCRIPT HERE
+      //track the curernt quantity
+      var quantity = 0;
+      //locate the html elements you need to interact with
+      var quantityDisplayVar = document.getElementById("quantityDisplay");
+      var addBtnVar = document.getElementById("addBtn");
+      var removeBtnVar = document.getElementById("removeBtn");
+
+      //function displays the new value
+      function addOne () {
+        quantity = quantity + 1;
+        //associate the value of the element with the variable
+        quantityDisplayVar.value = quantity;
+      };
+
+      function removeOne () {
+        quantity = quantity - 1;
+        quantityDisplayVar.value = quantity;
+      };
+
+      addBtnVar.onclick = addOne;
+      removeBtnVar.onclick = removeOne;
 
     </script>
   </body>
