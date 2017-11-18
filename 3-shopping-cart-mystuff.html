@@ -6,11 +6,20 @@
       var androidPrice = 10;
       var discount = 0.15; // 15%
 
+      //Show what's in the Cart
+      document.write("1 tshirt: "+"$"+tshirtPrice);
+      document.write("<br>");
+      document.write("1 android: "+"$"+androidPrice);
+      document.write("<br>");
+      document.write("discount: "+discount);
+      document.write("<br>");
+      document.write("<br>");
+
       // What is the cost of one t-shirt and one android?
       var subtotal = tshirtPrice+androidPrice;
 
       document.write("Subtotal: ");
-      document.write(subtotal);
+      document.write("$"+subtotal);
       document.write("<br>");
 
 
@@ -19,7 +28,7 @@
       var discountAmount = subtotal*discount;
 
       document.write("Discount: ");
-      document.write(discountAmount);
+      document.write("$"+discountAmount);
       document.write("<br>");
 
 
@@ -27,7 +36,7 @@
       var finalTotal = subtotal-discount;
 
       document.write("Final Total: ");
-      document.write(finalTotal);
+      document.write("$"+finalTotal);
 
       // BONUS: Add a dollar sign to the values!
     </script>
