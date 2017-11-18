@@ -20,25 +20,36 @@
       // ADD JAVASCRIPT HERE
       //track the curernt quantity
       var quantity = 0;
-      //locate the html elements you need to interact with
+      //locate the html elements you need to interact with and store it to a variable
       var quantityDisplayVar = document.getElementById("quantityDisplay");
       var addBtnVar = document.getElementById("addBtn");
       var removeBtnVar = document.getElementById("removeBtn");
 
+      document.write("Hi !"); //you specify the content to write
+
       //function displays the new value
       function addOne () {
-        quantity = quantity + 1;
+        quantity = quantity + 1; //you assign a value to a variable
         //associate the value of the element with the variable
         quantityDisplayVar.value = quantity;
       };
 
       function removeOne () {
         quantity = quantity - 1;
-        quantityDisplayVar.value = quantity;
+        quantityDisplayVar.value = quantity; //you assign a value to a property
       };
 
-      addBtnVar.onclick = addOne;
-      removeBtnVar.onclick = removeOne;
+      function changeBtnText () {
+        removeBtnVar.innerHTML = "clicked!"; //how can i put this in a parameter
+      }
+
+      function removeBtnEverything () {
+        removeOne (); //you call the function here
+        changeBtnText ();
+      }
+
+      addBtnVar.onclick = addOne; //you assign an interaction to a function, you don't call the function
+      removeBtnVar.onclick = removeBtnEverything;
 
     </script>
   </body>
