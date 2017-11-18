@@ -7,7 +7,7 @@
       var discount = 0.15; // 15%
 
       // What is the cost of one t-shirt and one android?
-      var subtotal = ???;
+      var subtotal = tshirtPrice+androidPrice;
 
       document.write("Subtotal: ");
       document.write(subtotal);
@@ -16,7 +16,7 @@
 
       // Ladies Learning Code members gets 15% off!
       // Figure out how much the discount will be.
-      var discountAmount = ???;
+      var discountAmount = subtotal*discount;
 
       document.write("Discount: ");
       document.write(discountAmount);
@@ -24,7 +24,7 @@
 
 
       // Apply the discount to get the final price.
-      var finalTotal = ???;
+      var finalTotal = subtotal-discount;
 
       document.write("Final Total: ");
       document.write(finalTotal);
