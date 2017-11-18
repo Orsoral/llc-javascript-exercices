@@ -39,16 +39,39 @@
         quantityDisplayVar.value = quantity; //you assign a value to a property
       };
 
-      function changeBtnText () {
-        removeBtnVar.innerHTML = "clicked!"; //how can i put this in a parameter
+      function changeBtnTextRemove () {
+        if (quantity === 0){
+          removeBtnVar.innerHTML = "Empty !"; //how can i put this in a parameter
+        }
+        else {
+          removeBtnVar.innerHTML = "Remove"; //how can i put this in a parameter
+        }
+      };
+
+      function changeBtnTextAdd () {
+        if (quantity === 10){
+          addBtnVar.innerHTML = "Full !"; //how can i put this in a parameter
+        }
+        else {
+          addBtnVar.innerHTML = "Add"; //how can i put this in a parameter
+        }
       }
 
       function removeBtnEverything () {
+        if (quantity > 0) {
         removeOne (); //you call the function here
-        changeBtnText ();
+        }
+        changeBtnTextRemove ();
+      };
+
+      function addBtnEverything () {
+        if (quantity < 10) {
+        addOne (); //you call the function here
+        }
+        changeBtnTextAdd ();
       }
 
-      addBtnVar.onclick = addOne; //you assign an interaction to a function, you don't call the function
+      addBtnVar.onclick = addBtnEverything; //you assign an interaction to a function, you don't call the function
       removeBtnVar.onclick = removeBtnEverything;
 
     </script>
