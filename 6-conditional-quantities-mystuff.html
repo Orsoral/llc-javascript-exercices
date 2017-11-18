@@ -26,15 +26,18 @@
       var addBtn = document.getElementById("add");
       var removeBtn = document.getElementById("remove");
 
-
       function addItem(){
+        if (quantity < 10){
         quantity = quantity + 1; // adds 1 to current value of quantity
         updateQuantity.value = quantity; // refresh the HTML quantity total to reflect new quantity
-      }
+        }
+      };
       function removeItem(){
+        if (quantity > 0){
         quantity = quantity - 1; // subtract 1 to current value of quantity
         updateQuantity.value = quantity;// refresh the HTML quantity total to reflect new updateQuantity
-      }
+        }
+      };
 
       // executes the above functions on button click
       addBtn.onclick = addItem;
