@@ -9,6 +9,11 @@
     // 2. Declare a variable to store the postal code value.
     var fullName=prompt("What is your full name?");
     var postalCode=prompt("What is your postal code?");
+    var adress=prompt("What is your street and building number?");
+    var unit=prompt("What is your unit number?");
+    var city=prompt("What is your city?");
+    var province=prompt("What is your province?");
+    var country=prompt("What is your country?");
 
 
     // This is just a heading
@@ -17,8 +22,11 @@
     // Revise the code here:
     document.write(fullName); // output the name
     document.write("<br>"); // just a line break
-    document.write(postalCode); // output the postal code
-
+    document.write(unit+"-"+adress); // output the first adress line
+    document.write("<br>"); // just a line break
+    document.write(city+" "+province+" "+postalCode); // output the province, city and postal code
+    document.write("<br>"); // just a line break
+    document.write(country); // output the country
     </script>
   </body>
 </html>
