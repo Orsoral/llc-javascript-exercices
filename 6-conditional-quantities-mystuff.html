@@ -15,7 +15,7 @@
 
       Quantity <input id="updateQuantity" type="text" value="0">
 
-      <button class="btn-checkout">checkout</button>
+      <button id="btn-checkout" class="btn-checkout">checkout</button>
     </div>
 
     <script>
@@ -25,23 +25,35 @@
       var updateQuantity = document.getElementById("updateQuantity");
       var addBtn = document.getElementById("add");
       var removeBtn = document.getElementById("remove");
+      var checkoutBtn = document.getElementById("btn-checkout");
 
       function addItem(){
         if (quantity < 10){
-        quantity = quantity + 1; // adds 1 to current value of quantity
-        updateQuantity.value = quantity; // refresh the HTML quantity total to reflect new quantity
-        }
+          quantity = quantity + 1; // adds 1 to current value of quantity
+          updateQuantity.value = quantity; // refresh the HTML quantity total to reflect new quantity
+        };
       };
       function removeItem(){
         if (quantity > 0){
-        quantity = quantity - 1; // subtract 1 to current value of quantity
-        updateQuantity.value = quantity;// refresh the HTML quantity total to reflect new updateQuantity
+          quantity = quantity - 1; // subtract 1 to current value of quantity
+          updateQuantity.value = quantity;// refresh the HTML quantity total to reflect new updateQuantity
+        };
+      };
+
+      function checkoutPurchase () {
+        if (quantity === 0) {
+          alert("You can't checkout an empty cart !");
         }
+        else {
+          alert("Thanks for your purchase !");
+        };
       };
 
       // executes the above functions on button click
       addBtn.onclick = addItem;
       removeBtn.onclick = removeItem;
+      checkoutBtn.onclick = checkoutPurchase;
+
     </script>
   </body>
 </html>
