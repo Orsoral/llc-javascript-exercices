@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Update Quantities</title>
+    <link rel="stylesheet" href="exercises.css">
+  </head>
+  <body>
+
+<button id="moreBtn">
+  <img src="assets/llc-logo.png"> Love !
+  <span id="counter">893</span>
+</button>
+
+<script>
+// starts the count at 0
+var loves = 893;
+// locate where to display total count
+var update = document.getElementById("counter");
+// locate trigger button
+var moreBtn = document.getElementById("moreBtn");
+
+// custom function
+function moreLove(){
+  // Increment counter by one
+  loves = loves + 1;
+  // applies an .innerHTML method to the update element's count
+  update.innerHTML = loves;
+}
+
+// on button click, execute the custom moreLove() function
+moreBtn.onclick = moreLove;
+</script>

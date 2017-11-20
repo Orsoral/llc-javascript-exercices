@@ -1,6 +1,6 @@
-/* 
+/*
 	Exercises:
-	5-update-quantities.html 
+	5-update-quantities.html
 	6-conditional-quantities.html
 */
 
@@ -22,7 +22,7 @@
 	cursor: pointer;
 	border: 1px solid #ddd;
 	background: #eee;
-}	
+}
 .quantities button:hover {
 	border: 1px solid white;
 }
@@ -38,3 +38,12 @@
 	font-size: 14px;
 }
 
+button{
+	width: 6em;
+	height: 6em;
+}
+
+img {
+	display: block;
+	margin: auto;
+}
