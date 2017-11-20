@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Update Quantities</title>
+    <link rel="stylesheet" href="exercises.css">
+  </head>
+  <body>
+
+    <button id="switch">
+      Toggle visibility of buttons
+    </button>
+    <br><br>
+
+<div id="btnGroup">
+  <button>
+    <img src="assets/llc-logo.png">
+    Button text here
+  </button>
+  <button>
+    <img src="assets/llc-logo.png">
+    Button text here
+  </button>
+  <button>
+    <img src="assets/llc-logo.png">
+    Button text here
+  </button>
+  <button>
+    <img src="assets/llc-logo.png">
+    Button text here
+  </button>
+</div>
+
+<script>
+// locate the area to show/hide is
+var btnGroup = document.getElementById("btnGroup");
+// locate trigger button
+var switchBtn = document.getElementById("switch");
+// starts the count at whatever the original value was
+// moved here to define location of the counter before getting its value from the html (and eventually from database)
+var currentState = 0;
+
+document.write("JS active")
+// custom function
+function switchVisibility(){
+  // If the groups is hidden, show it
+  btnGroup.style.display = "block";
+  // Update the current state, 1 for visible
+  currentState = 1
+
+  // // If the groups is visibile, hide it
+  // btnGroup.style.display = 'hidden';
+  // // Update the current state, 0 for hidden
+  // currentState = 0
+
+  // need some function here later to update the value in the database
+  }
+
+// on button click, execute the custom moreLove() function
+switchBtn.onclick = switchVisibility;
+</script>
+
+</body>
