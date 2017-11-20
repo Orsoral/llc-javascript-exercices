@@ -42,17 +42,19 @@ document.write("JS active")
 // custom function
 function switchVisibility(){
   // If the groups is hidden, show it
+  if(currentState === 0){
   btnGroup.style.display = "block";
   // Update the current state, 1 for visible
   currentState = 1
-
-  // // If the groups is visibile, hide it
-  // btnGroup.style.display = 'hidden';
-  // // Update the current state, 0 for hidden
-  // currentState = 0
-
-  // need some function here later to update the value in the database
   }
+  else {
+  // If the groups is visibile, hide it
+  btnGroup.style.display = 'none';
+  // Update the current state, 0 for hidden
+  currentState = 0
+  };
+  // need some function here later to update the value in the database
+  };
 
 // on button click, execute the custom moreLove() function
 switchBtn.onclick = switchVisibility;
