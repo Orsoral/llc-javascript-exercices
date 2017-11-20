@@ -5,12 +5,12 @@
   </head>
   <body>
 
-    <button id="switch">
+    <button id="switch" class="JSTrigger">
       Toggle visibility of buttons
     </button>
-    <br><br>
 
 <div id="btnGroup">
+  <br>
   <button>
     <img src="assets/llc-logo.png">
     Button text here
@@ -34,11 +34,16 @@
 var btnGroup = document.getElementById("btnGroup");
 // locate trigger button
 var switchBtn = document.getElementById("switch");
-// starts the count at whatever the original value was
-// moved here to define location of the counter before getting its value from the html (and eventually from database)
+
+//show the toggle visibility switch only if JS is enabled, otherwise, always show the button group
+switchBtn.style.display = "block";
+//Hide the buttons and track the status of the button visibility
+btnGroup.style.display = "none";
 var currentState = 0;
 
-document.write("JS active")
+//Try to grab the display value to toggle switch based on initial CSS
+var displayValue = document.getElementById('btnGroup').style.display;
+
 // custom function
 function switchVisibility(){
   // If the groups is hidden, show it
@@ -49,12 +54,12 @@ function switchVisibility(){
   }
   else {
   // If the groups is visibile, hide it
-  btnGroup.style.display = 'none';
+  btnGroup.style.display = "none";
   // Update the current state, 0 for hidden
   currentState = 0
   };
   // need some function here later to update the value in the database
-  };
+};
 
 // on button click, execute the custom moreLove() function
 switchBtn.onclick = switchVisibility;
